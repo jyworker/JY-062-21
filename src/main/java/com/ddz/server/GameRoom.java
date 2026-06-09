@@ -213,7 +213,7 @@ public class GameRoom {
             return;
         }
 
-        CardLogic.Play currentPlay = CardLogic.getPlayType(cards);
+        CardLogic.Play currentPlay = CardLogic.getPlayType(new ArrayList<>(cards));
         boolean isNewTurn = (lastPlayerId == null || lastPlayerId.equals(playerId));
         CardLogic.Play lastEffectivePlay = isNewTurn ? null : lastPlayType;
 
